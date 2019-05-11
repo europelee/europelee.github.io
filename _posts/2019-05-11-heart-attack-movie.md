@@ -6,13 +6,13 @@
 
 男主是平面设计师，作为一名自由职业者，加班加点通宵达旦工作，从不对工作say no, 直到身体出现问题，才去医院看病，碰到了女主人公，一名年轻的皮肤科医生，对女主暗生情愫，从一开始抗拒女主的医嘱再到后来认真治疗，调整作息，慢慢恢复了健康，虽然为此丢了阿迪达斯的工作。可能刚开始是女主的缘故，但是后面放下工作，去看海、看日落，到最后再疯狂连续12天不休不眠工作，经历了生死边缘，在病房内，包工头的催命下，换成以前的他，将会是拼命三郎，使命必达吧，但最终他在工作和健康作出了自己感悟的选择。听起来，是不是觉得一般般呢，看看下面的台词, 有没有似曾相识的感觉:  
 
-![img](img/in-post/post-heart-attack/fitness.png)  
-![img](img/in-post/post-heart-attack/show.png)  
-![img](img/in-post/post-heart-attack/despise.png)  
-![img](img/in-post/post-heart-attack/talk.png)  
+![img](/img/in-post/post-heart-attack/fitness.png)  
+![img](/img/in-post/post-heart-attack/show.png)  
+![img](/img/in-post/post-heart-attack/despise.png)  
+![img](/img/in-post/post-heart-attack/talk.png)  
 
 影片中男主倒在地上设想了自己的葬礼场景，排了好几排的椅子，最后他能想到的是自己的老母亲、工作上的搭档朋友、一直在7-11吃便当而认识的凯、自己都忘了多久没联系的好朋友彭，最后是自己还犹豫请不请女主医生来，也想起还没改自己妈妈修图。想想，好像自己也差不多这样，hehe.
 
 就像很多故事一样，身在福中不知福，平时对自己拥有的幸福视而不见，等到失去了才懊悔，难道这是大多数人，包括我的悲哀？
 
-![img](img/in-post/post-heart-attack/happy.png)
+![img](/img/in-post/post-heart-attack/happy.png)
