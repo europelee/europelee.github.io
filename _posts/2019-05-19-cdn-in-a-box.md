@@ -24,7 +24,7 @@ Traffic Router - at infrastructure/cdn-in-a-box/traffic_router/traffic_router.rp
 ## Usage  
 典型场景下，假如上述编译步骤有顺利执行完成，那么启动CDN in a Box仅需要在目录infrastructure/cdn-in-a-box执行一个操作 docker-compose up, -d参数是可选的，用于运行在后台。这个操作将启动所有stack,并且会做好所需的各种初始化配置。容器内的服务将通过指定端口暴露于本地。这些是在infrastructure/cdn-in-a-box/docker-compose.yml文件内配置的，但是默认端口显示在Service Info。某些服务需要证书关联，这些是配置在variables.env.  
 
-                        Table 41 Service Info  
+Table 41 Service Info  
 Service | Ports exposed and their usage| Username | Password
 - | :- | :- | :- 
 DNS | DNS name resolution on 9353	 | N/A | N/A
@@ -43,7 +43,7 @@ Traffic Stats Influxdb|Influxdbd connections accepted on port 8086 (database nam
 当组件通过使用这些ports来互相交互，CDN的操作只能从Docker网络看到，为了看到CDN的实践，连接到CDN in a Box项目一个container, 使用cURL来请求URL http://video.demo1.mycdn.ciab.test, 会被DNS container解析到Traffic Router的ip，Traffic Router会提供302响应指向Edge-Tier cache.
 一个典型的选择是"enroller"服务，它有curl命令安装的。对用户更友好的接口，参考VNC Server.  
 
-               #51 Example Command to See the CDN in Action  
+#51 Example Command to See the CDN in Action  
 ```
 sudo docker-compose exec enroller /usr/bin/curl -L "http://video.demo1.mycdn.ciab.test"  
 ```
@@ -140,3 +140,4 @@ All components in Apache Traffic Control utilize SSL/TLS secure communications b
 Apache Traffic Control的所有组件默认是使用SSL/TLS保障安全通信。  
 
 ## Advanced Usage  
+待续
