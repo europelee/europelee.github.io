@@ -25,7 +25,7 @@ Traffic Router - at infrastructure/cdn-in-a-box/traffic_router/traffic_router.rp
 典型场景下，假如上述编译步骤有顺利执行完成，那么启动CDN in a Box仅需要在目录infrastructure/cdn-in-a-box执行一个操作 docker-compose up, -d参数是可选的，用于运行在后台。这个操作将启动所有stack,并且会做好所需的各种初始化配置。容器内的服务将通过指定端口暴露于本地。这些是在infrastructure/cdn-in-a-box/docker-compose.yml文件内配置的，但是默认端口显示在Service Info。某些服务需要证书关联，这些是配置在variables.env.  
 
 Table 41 Service Info  
-Service | Ports exposed and their usage| Username | Password
+Service | Ports exposed and their usage| Username | Password  
 - | :- | :- | :- 
 DNS | DNS name resolution on 9353	 | N/A | N/A
 Edge Tier Cache|Apache Trafficserver HTTP caching reverse proxy on port 9000|N/A|N/A
