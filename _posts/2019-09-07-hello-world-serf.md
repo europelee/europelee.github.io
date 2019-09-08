@@ -8,7 +8,7 @@ tags:
 # hello world serf  (repost)
 正文原封不动转自[Practical Golang: Building a simple, distributed one-value database with Hashicorp Serf](https://jacobmartins.com/2017/01/29/practical-golang-building-a-simple-distributed-one-value-database-with-hashicorp-serf/)  
 
-虽然本文作者说的是a simple, distributed one-value数据库, 但是却没提到分布式数据库☝️重要的共识算法，eg with Hashicorp raft, 来保证数据的一致性（[hraftd](https://github.com/otoolep/hraftd)了解下hello world raft,还有[这个](https://cloud.tencent.com/developer/article/1211094)）。本文提到的serf更多用于集群状态管理，最近工作中有些关于这方面应用的idea, 来了解下。By the way, [HashiCorp](https://github.com/hashicorp)的很多开源的项目适合实战学习，<<[设计数据密集型应用](https://github.com/Vonng/ddia)>>则很适合分布式系统理论学习，开源的中文翻译版。
+虽然本文作者说的是a simple, distributed one-value数据库, 但是却没提到分布式数据库☝️重要的共识算法，eg with Hashicorp raft, 来保证数据的一致性（[hraftd](https://github.com/otoolep/hraftd)了解下hello world raft,还有[这个](https://cloud.tencent.com/developer/article/1211094)）。本文提到的serf更多用于集群状态管理，最近工作中有些关于这方面应用的idea, 来了解下, 本文仅涉及member的提取，另外github搜了一下，[scale15x](https://github.com/kiyor/scale15x), [flyte-serf](https://github.com/HotelsDotCom/flyte-serf)也可以参考下有关event的handle，上面用于实战快速入门，更好的参考当然是[serf](https://github.com/hashicorp/serf)源代码。By the way, [HashiCorp](https://github.com/hashicorp)的很多开源的项目适合实战学习，<<[设计数据密集型应用](https://github.com/Vonng/ddia)>>则很适合分布式系统理论学习，开源的中文翻译版。
 
 ## Introduction
 With the advent of *distributed applications*, we see new storage solutions emerging constantly.
