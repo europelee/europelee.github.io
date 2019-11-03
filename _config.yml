@@ -77,10 +77,22 @@ page-mathjax: false
 
 
 
-# Friends
-friends: [
+# Links
+links: [
     {
         title: "google",
         href: "https://www.google.com"
+    },
+    {
+        title: "infoq-cn",
+        href: "https://www.infoq.cn"
+    },
+    {
+        title: "devdocs",
+        href: "https://devdocs.io"
+    },
+    {
+        title: "awesome",
+        href: "https://github.com/sindresorhus/awesome"
     }
 ]
