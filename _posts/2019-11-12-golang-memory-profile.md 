@@ -1,0 +1,10 @@
+---
+layout:     post
+tags:
+    - golang
+    - memory
+    - pprof
+---
+# golang memory profile (repost)
+
+https://blog.detectify.com/2019/09/05/how-we-tracked-down-a-memory-leak-in-one-of-our-go-microservices/
