@@ -96,3 +96,5 @@ links: [
         href: "https://github.com/sindresorhus/awesome"
     }
 ]
+
+theme: jekyll-theme-time-machine
