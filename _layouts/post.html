@@ -5,6 +5,8 @@ layout: default
 <!-- Image to hack wechat -->
 <!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
 
+{% assign assets_base_url = site.baseurl %} 
+
 <!-- Post Header -->
 {% include intro-header.html type='post' %}
 
@@ -94,6 +96,14 @@ layout: default
 
                 <!-- Links Blog -->
                 {% include links.html %}
+            </div>
+
+    <!--gitalk组件-->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+                {% include gitalk.html %}
             </div>
         </div>
     </div>
