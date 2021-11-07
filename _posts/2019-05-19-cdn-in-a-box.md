@@ -1,4 +1,12 @@
-# CDN in a Box(译)  
+---
+layout:     post
+title:      "CDN in a Box(译)"
+tags:
+    - CDN
+
+---
+# CDN in a Box(译)
+
 原文来自<https://traffic-control-cdn.readthedocs.io/en/latest/admin/quick_howto/ciab.html#cdn-in-a-box>  
 
 "CDN in a Box"是一个按惯例起的名字，源于Traffic Control新的开发者或有意使用的用户试图建立一个他们自己的微型CDN来体验Traffic Control的各个组件是如何构建出一个CDN系统。在以前，这是一个噩梦，需要复杂的脚本和手工配置很多的网络设置。最近几年，很多人已经把项目的安装部署Docker化了, 简化网络配置，虽然目前还是有些过程比较有障碍。项目已经达到了一个可工作状态，并且mock/测试CDN的工作是一个相当简单的任务（虽然比较花时间）。  
@@ -17,17 +25,17 @@ Traffic Ops - at infrastructure/cdn-in-a-box/traffic_ops/traffic_ops.rpm
 Traffic Portal - at infrastructure/cdn-in-a-box/traffic_portal/traffic_portal.rpm
 Traffic Router - at infrastructure/cdn-in-a-box/traffic_router/traffic_router.rpm - also requires an Apache Tomcat RPM at infrastructure/cdn-in-a-box/traffic_router/tomcat.rpm  
 
-
 这些rpm包可以通过那些编译Traffic Control或者外部源的步骤来获取。另外方式，infrastructure/cdn-in-a-box路径下的Makefile文件包含了所有这些编译需要，在目录infrastructure/cdn-in-a-box简单运行make命令既可，一旦所有依赖的RPM生成，在infrastructure/cdn-in-a-box目录下执行docker-compose build就可以构建出运行"CDN in a Box"所需的镜像。  
 
-
 ## Usage  
+
 典型场景下，假如上述编译步骤有顺利执行完成，那么启动CDN in a Box仅需要在目录infrastructure/cdn-in-a-box执行一个操作 docker-compose up, -d参数是可选的，用于运行在后台。这个操作将启动所有stack,并且会做好所需的各种初始化配置。容器内的服务将通过指定端口暴露于本地。这些是在infrastructure/cdn-in-a-box/docker-compose.yml文件内配置的，但是默认端口显示在Service Info。某些服务需要证书关联，这些是配置在variables.env.  
 
 Table 41 Service Info  
 Service | Ports exposed and their usage| Username | Password  
-- | :- | :- | :- 
-DNS | DNS name resolution on 9353	 | N/A | N/A
+
+- | :- | :- | :-
+DNS | DNS name resolution on 9353  | N/A | N/A
 Edge Tier Cache|Apache Trafficserver HTTP caching reverse proxy on port 9000|N/A|N/A
 Mid Tier Cache|Apache Trafficserver HTTP caching forward proxy on port 9100|N/A|N/A
 Mock Origin Server|Example web page served on port 9200|N/A|N/A
@@ -40,16 +48,19 @@ Traffic Vault|Riak key-value store on port 8010|TV_ADMIN_USER in variables.env|T
 Traffic Stats|N/A|N/A|N/A
 Traffic Stats Influxdb|Influxdbd connections accepted on port 8086 (database name: cache_stats, daily_stats and deliveryservice_stats)|INFLUXDB_ADMIN_USER in variables.env|INFLUXDB_ADMIN_PASSWORD in variables.env  
 
-当组件通过使用这些ports来互相交互，CDN的操作只能从Docker网络看到，为了看到CDN的实践，连接到CDN in a Box项目一个container, 使用cURL来请求URL http://video.demo1.mycdn.ciab.test, 会被DNS container解析到Traffic Router的ip，Traffic Router会提供302响应指向Edge-Tier cache.
+当组件通过使用这些ports来互相交互，CDN的操作只能从Docker网络看到，为了看到CDN的实践，连接到CDN in a Box项目一个container, 使用cURL来请求URL <http://video.demo1.mycdn.ciab.test>, 会被DNS container解析到Traffic Router的ip，Traffic Router会提供302响应指向Edge-Tier cache.
 一个典型的选择是"enroller"服务，它有curl命令安装的。对用户更友好的接口，参考VNC Server.  
 
-#51 Example Command to See the CDN in Action  
-```
+## 51 Example Command to See the CDN in Action  
+
+```bash
 sudo docker-compose exec enroller /usr/bin/curl -L "http://video.demo1.mycdn.ciab.test"  
 ```
+
 使用docker-compose down -v关闭CDN, 这是因为下次启动时系统中共享卷的使用可能会和一个合适的初始化交互。  
 **variables.env**  
-```
+
+```text
 TLD_DOMAIN=ciab.test
 INFRA_SUBDOMAIN=infra
 CDN_NAME=CDN-in-a-Box
@@ -136,8 +147,10 @@ AUTO_SNAPQUEUE_ACTION_WAIT=2
 ```  
 
 ## X.509 SSL/TLS Certificates  
+
 All components in Apache Traffic Control utilize SSL/TLS secure communications by default. For SSL/TLS connections to properly validate within the “CDN in a Box” container network a shared self-signed X.509 Root CA is generated at the first initial startup. An X.509 Intermediate CA is also generated and signed by the Root CA. Additional “wildcard” certificates are generated/signed by the Intermediate CA for each container service and demo1, demo2, and demo3 Delivery Services. All certificates and keys are stored in the ca host volume which is located at infrastruture/cdn-in-a-box/traffic_ops/ca[4].  
 Apache Traffic Control的所有组件默认是使用SSL/TLS保障安全通信。  
 
 ## Advanced Usage  
+
 待续

@@ -1,3 +1,10 @@
+---
+layout:     post
+title:      "CDN CNAME Setup"
+tags:
+    - CDN
+
+---
 # CDN CNAME Setup
 
 ## **简介**
