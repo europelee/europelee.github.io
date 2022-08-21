@@ -22,10 +22,13 @@ tags:
 |------|----------------|----------------|----------------|---------------------|
 |开发|Visual Studio Code|码<br>Git查看<br>setting sync etc|微软官方网站直接下载|若下载慢，直接百度下，使用azure加速域名替换下载url|
 |开发|Docker Desktop for Linux|构建程序开发、测试环境|官方网站|新鲜出炉|
-|开发|Git|代码版本管理|apt-get|-|
+|开发|Git|版本管理|apt-get|-|
 |开发|Python,Go|语言包|官方|参考[pyenv](https://blog.csdn.net/inke88/article/details/59761696)|
 |开发|zsh|好用的命令解释器|官方|参考[install ohmyzsh](https://gist.github.com/europelee/128c5fecedb71bd3fd4c95c3cda35bb1)|
 |网络|shadowsocks,privoxy|翻墙|[部署](https://gist.github.com/europelee/f5681ae12e601985878ae314039617ab)|-|
 |网络|SwitchyOmega|Chrome浏览器翻墙|[部署](https://github.com/FelisCatus/SwitchyOmega)|-|
 |文档|XMind|思考|[下载](https://www.xmind.cn/download/)|-|
 |IM|企业微信|沟通|deepin-wine|参考上面链接|
+
+## **后续**  
+只能说电脑配置升级了，还有试了Windows上的WSL2系统，满足了平时的工作需求，感觉WSL2还挺香的，放弃了折腾双系统想法。
